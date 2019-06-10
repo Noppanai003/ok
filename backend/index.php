@@ -10,7 +10,8 @@ header('Access-Control-Allow-Headers: *');
 
 
 require './configs/defines.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า defines.php 
-
+require './configs/routes.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า routes.php 
+require './configs/database.php';
 
 // $host       = 'localhost';
 // $user       = 'root';
@@ -18,8 +19,7 @@ require './configs/defines.php'; //เรียกใช้ตัวที่ป
 // $dbname     = 'carcare';
 
 // $database = mysqli_connect($host,$user,$password,$dbname);
-// require './configs/routes.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า routes.php 
-// require './configs/database.php';
+
 // if(!$database)
 // {   
 //     http_response_code(500);
