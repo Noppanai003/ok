@@ -16,22 +16,23 @@ export class MemberService {
     return this.httpClient.get<IMember[]>(this.backendURL);
   }
 
-  // บันทึกข้อมูล Member 
-  postItem(Value: IMember) { //ต้องรับพารามิเตอร์ที่จะทำการเอาข้อมูลไปใส่ในฐานข้อมูล คือค่าเมดธอดล่าง
-    return this.httpClient.post(this.backendURL, Value);
-  }
-
-  // แก้ไขข้อมูล Member
-  putItem(id: any, value: IMember) { // ต้องใช้สองค่าในการเช็ค คือไอดีเพื่อตรวจสอบว่าเราไปใช้เรคคอร์ดไหน สองคือ value ข้อมูลชุดใหม่ที่จะเข้ามาแทนที่ชุดเดิม 
-    // value.mem_email =''; เช็คว่าตัวกัน error ใช่ได้มั้ย
-    return this.httpClient.put(this.backendURL, value, { params: { id } });
-  }
-
-  // ลบข้อมูล Member
-  deleteItem(id: any) {
-    return this.httpClient.delete(this.backendURL, { params: { id } });
-  }
 }
+// Test 
+//   // บันทึกข้อมูล Member 
+//   postItem(Value: IMember) { //ต้องรับพารามิเตอร์ที่จะทำการเอาข้อมูลไปใส่ในฐานข้อมูล คือค่าเมดธอดล่าง
+//     return this.httpClient.post(this.backendURL, Value);
+//   }
+
+//   // แก้ไขข้อมูล Member
+//   putItem(id: any, value: IMember) { // ต้องใช้สองค่าในการเช็ค คือไอดีเพื่อตรวจสอบว่าเราไปใช้เรคคอร์ดไหน สองคือ value ข้อมูลชุดใหม่ที่จะเข้ามาแทนที่ชุดเดิม 
+//     // value.mem_email =''; เช็คว่าตัวกัน error ใช่ได้มั้ย
+//     return this.httpClient.put(this.backendURL, value, { params: { id } });
+//   }
+
+//   // ลบข้อมูล Member
+//   deleteItem(id: any) {
+//     return this.httpClient.delete(this.backendURL, { params: { id } });
+//   }
 
 export interface IMember {
   mem_id?: string;
