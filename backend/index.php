@@ -9,9 +9,10 @@ header('Access-Control-Allow-Headers: *');
 
 
 
-require './configs/defines.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า defines.php 
-require './configs/routes.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า routes.php 
-require './configs/database.php';
+require './configs/defines.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า defines.php
+// เตรียมส่ง
+// require './configs/routes.php'; //เรียกใช้ตัวที่ประกาศเอาไว้จากหน้า routes.php 
+// require './configs/database.php';
 
 // $host       = 'localhost';
 // $user       = 'root';
@@ -39,18 +40,6 @@ if(isset($routes[$route] [$method])) //เช็คว่า routes นี่ม
     http_response_code(404); //ถ้าไม่มีก็แจ้ง
     echo json_encode(['message' => 'Page not found.']);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // switch ($route) {
 //     case '/api/member'; //ถ้ามีการเข้า route
